@@ -6,7 +6,9 @@ class Queues {
     int queue_array[5];
 
 public:
+    Queues() {
 
+    }
 };
 
 int main()
