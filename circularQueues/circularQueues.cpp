@@ -16,19 +16,33 @@ public:
         cout << "Enter a number :";
         cin >> num;
         cout << endl;
-    }
-    //CEK APAKAH ANTRIAN PENUH
-    if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
-        cout << "\nQueue overflow\n";
+
+        //CEK APAKAH ANTRIAN PENUH
+        if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
+            cout << "\nQueue overflow\n";
+
+        }
+        //cek apakah antrian kosong
+
+        if (FRONT == -1) {
+            FRONT = 0;
+            REAR = 0;
+        }
+        else {
+            //jika rear berada di posisi nterakhir array, kembali ke awal array
+            if (REAR == max - 1)
+                REAR = 0;
+            else
+                REAR = REAR + 1;
+
+        }
+        queue_array[REAR] = num;
 
     }
-    //cek apakah antrian kosong
+    void remove() {
 
-    if (FRONT == -1) {
-        FRONT = 0;
-        REAR = 0;
     }
-};
+
 
 int main()
 {
