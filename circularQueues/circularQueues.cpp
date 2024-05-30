@@ -60,6 +60,8 @@ public:
                 FRONT = FRONT + 1;
         }
     }
+    void display() {
+
 
 int main()
 {
